@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+{{include './head' $data.blog}}
+<body>
+
+    <div id="wrapper">
+
+        <div class="header">
+            <a href="./">{{user.name}}</a>
+        </div>
+        <p class="links">
+            <a href="{{user.twitter}}" target="_blank">
+                <img src="./images/twitter.svg">
+            </a>
+            <a href="{{user.github}}" target="_blank">
+                <img src="./images/github.svg">
+            </a>
+            <a href="./rss" target="_blank">
+                <img src="./images/rss.svg">
+            </a>
+        </p>
+
+        <div class="main">
+            <ul>
+                <li>
+                    <h3>Dec 20, 2015</h3>
+                    <h2><a href="#">Lorem ipsum dolor sit amet.</a></h2>
+                </li>
+                <li>
+                    <h3>Oct 25, 2015</h3>
+                    <h2><a href="#">Lorem ipsum dolor sit amet consectetur.</a></h2>
+                </li>
+                <li>
+                    <h3>Feb 11, 2014</h3>
+                    <h2><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing.</a></h2>
+                </li>
+                <li>
+                    <h3>Jan 3, 2014</h3>
+                    <h2><a href="#">Lorem ipsum dolor sit amet.</a></h2>
+                </li>
+                <li>
+                    <h3>Dec 29, 2013</h3>
+                    <h2><a href="#">Lorem ipsum dolor sit.</a></h2>
+                </li>
+                <li>
+                    <h3>Nov 4, 2013</h3>
+                    <h2><a href="#">Lorem ipsum dolor sit amet consectetur.</a></h2>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

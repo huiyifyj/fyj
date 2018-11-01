@@ -1,0 +1,46 @@
+{
+  "name": "Fyj",
+  "private": true,
+  "version": "0.0.1",
+  "description": "My personal web blog app.",
+  "main": "server.js",
+  "homepage": "https://blog.huiyifyj.cn",
+  "scripts": {
+    "start": "nodemon ./server.js --exec babel-node",
+    "dev": "nodemon ./server.js --exec babel-node",
+    "test": "mocha --recursive --require @babel/register"
+  },
+  "author": {
+    "name": "Huiyi.FYJ",
+    "url": "https://huiyifyj.cn"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "art-template": "^4.13.1",
+    "koa": "^2.5.3",
+    "koa-art-template": "^1.1.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-jsonp": "^2.0.2",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "markdown-it": "^8.4.2",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.5",
+    "supertest": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huiyifyj/blog"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}
