@@ -19,9 +19,9 @@ const home = (ctx) => {
 }
 
 const about = (ctx) => {
-    ctx.response.body = '<h1>About</h1>'
+    ctx.response.body = '<h1>About Page</h1>'
 }
 
 const rss = (ctx) => {
-    ctx.response.body = '<h1>RSS</h1>'
+    ctx.response.body = '<h1>RSS Page</h1>'
 }
