@@ -1,6 +1,6 @@
 import mysql from 'mysql';
 
-import databaseConfig from './config/database.json';
+import databaseConfig from '../config/database.json';
 
 const pool = mysql.createPool(databaseConfig);
 
