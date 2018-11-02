@@ -1,10 +1,10 @@
 import mysql from 'mysql';
 
-import databaseConfig from '../config/database.json';
+import dbConfig from '../config/database.json';
 
-const pool = mysql.createPool(databaseConfig);
+const pool = mysql.createPool(dbConfig);
 
-let query = ( sql, values ) => {
+let query = (sql, values) => {
 
     return new Promise((resolve, reject) => {
         pool.getConnection((err, connection) => {
