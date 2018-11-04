@@ -24,30 +24,12 @@
 
         <div class="main">
             <ul>
+                {{each articles}}
                 <li>
-                    <h3>Dec 20, 2015</h3>
-                    <h2><a href="#">Lorem ipsum dolor sit amet.</a></h2>
+                    <h3>{{$value.time}}</h3>
+                    <h2><a href="#">{{$value.title}}</a></h2>
                 </li>
-                <li>
-                    <h3>Oct 25, 2015</h3>
-                    <h2><a href="#">Lorem ipsum dolor sit amet consectetur.</a></h2>
-                </li>
-                <li>
-                    <h3>Feb 11, 2014</h3>
-                    <h2><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing.</a></h2>
-                </li>
-                <li>
-                    <h3>Jan 3, 2014</h3>
-                    <h2><a href="#">Lorem ipsum dolor sit amet.</a></h2>
-                </li>
-                <li>
-                    <h3>Dec 29, 2013</h3>
-                    <h2><a href="#">Lorem ipsum dolor sit.</a></h2>
-                </li>
-                <li>
-                    <h3>Nov 4, 2013</h3>
-                    <h2><a href="#">Lorem ipsum dolor sit amet consectetur.</a></h2>
-                </li>
+                {{/each}}
             </ul>
         </div>
 
