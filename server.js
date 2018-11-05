@@ -11,7 +11,7 @@ import routers from './routes';
 const app = new Koa();
 
 render(app, {
-    root: path.join(__dirname, 'views'),
+    root: path.join(__dirname, './public'),
     extname: '.htm',
     escape: true,
     minimize: true
@@ -19,7 +19,7 @@ render(app, {
 
 app.use(logger())
    .use(bodyParser())
-   .use(staticCache(path.join(__dirname, "./public"), {
+   .use(staticCache(path.join(__dirname, "./public/assets"), {
         maxAge: 365 * 24 * 60 * 60,
         gzip:true
    }))
