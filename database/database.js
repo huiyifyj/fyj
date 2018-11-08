@@ -1,23 +1,17 @@
-import assert from 'assert';
+import test from 'assert';
 
 import { MongoClient } from 'mongodb';
 
 import mongo from '../config/mongodb.json';
 
-const url = 'mongodb://' + mongo.ip + ':' + mongo.port;
+const url = 'mongodb://' + mongo.ip + ':' + mongo.port + '/' + mongo.database;
 
-// Database Name
-const dbName = 'aaa';
+MongoClient.connect(url)
+        .then(db => {
+            db.createCollection('fyj');
 
-// Create a new MongoClient
-const client = new MongoClient(url);
-
-// Use connect method to connect to the Server
-client.connect(function(err) {
-  assert.equal(null, err);
-  console.log("Connected successfully to server");
-
-  const db = client.db(dbName);
-
-  client.close();
-});
+            db.close();
+        })
+        .catch(err => {
+            throw err;
+        });
