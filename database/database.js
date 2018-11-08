@@ -1,26 +1,23 @@
-import mysql from 'mysql';
+import assert from 'assert';
 
-import dbConfig from '../config/database.json';
+import { MongoClient } from 'mongodb';
 
-const pool = mysql.createPool(dbConfig);
+import mongo from '../config/mongodb.json';
 
-let query = (sql, values) => {
+const url = 'mongodb://' + mongo.ip + ':' + mongo.port;
 
-    return new Promise((resolve, reject) => {
-        pool.getConnection((err, connection) => {
-            if (err) {
-                reject(err)
-            } else {
-                connection.query(sql, values, (err, rows) => {
-                    if (err) {
-                        reject(err);
-                    } else {
-                        resolve(rows);
-                    }
-                    connection.release();
-                });
-            }
-        });
-    });
+// Database Name
+const dbName = 'aaa';
 
-}
+// Create a new MongoClient
+const client = new MongoClient(url);
+
+// Use connect method to connect to the Server
+client.connect(function(err) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+
+  const db = client.db(dbName);
+
+  client.close();
+});
