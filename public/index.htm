@@ -5,35 +5,31 @@
 </head>
 <body>
 
-    <div id="wrapper">
-
-        <div class="header">
-            <a href="./">{{user.name}}</a>
+    <header id="site-head">
+        <div id="site-head-content" class="inner">
+            {{if logo}}
+            <a id="blog-logo" href="{{url}}">
+                <img src="{{logo}}" alt="Blog Logo" />
+            </a>
+            {{/if}}
+            <h1 class="blog-title">{{title}}</h1>
+            <h2 class="blog-description">{{description}}</h2>
         </div>
-        <p class="links">
-            <a href="{{user.twitter}}" target="_blank">
-                <img src="./images/twitter.svg">
-            </a>
-            <a href="{{user.github}}" target="_blank">
-                <img src="./images/github.svg">
-            </a>
-            <a href="./rss" target="_blank">
-                <img src="./images/rss.svg">
-            </a>
-        </p>
+    </header>
 
-        <div class="main">
-            <ul>
-                {{each articles}}
-                <li>
-                    <h3>{{$value.time}}</h3>
-                    <h2><a href="#">{{$value.title}}</a></h2>
-                </li>
-                {{/each}}
-            </ul>
+    <main class="content" role="main">
+        {{each articles}}
+        {{include './loop' $value}}
+        {{/each}}
+    </main>
+
+    <footer class="site-footer">
+        <div class="inner">
+                <section class="copyright">All content copyright <a href="{{url}}">{{title}}</a> &copy; {{date}}</section>
+                <section class="poweredby">Designed &amp; Developed by <a href="http://blog.huiyifyj.cn">Marco Santonocito</a>. Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a>.</section>
+                <section class="subscribe"><a class="icon-rss" href="{{url}}/rss/"></a></section>
         </div>
-
-    </div>
+    </footer>
 
 </body>
 </html>

@@ -1,0 +1,17 @@
+<article class="post">
+
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>{{excerpt}}&hellip;</p>
+    </section>
+    <footer>
+        <ul class="post-meta">
+            {{if author}}<li><i class="icon-user"></i> {{ author }}</li>{{/if}}
+            <li><i class="icon-time"></i> <time datetime="{{date}}">{{date}}</time></li>
+            {{if tags}}<li><i class="icon-tags"></i> {{tags}}</li>{{/if}}
+        </ul>
+    </footer>
+
+</article>
