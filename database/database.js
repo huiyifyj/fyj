@@ -1,17 +1,7 @@
-import test from 'assert';
-
-import { MongoClient } from 'mongodb';
+import mongoose from 'mongoose';
 
 import mongo from '../config/mongodb.json';
 
-const url = 'mongodb://' + mongo.ip + ':' + mongo.port + '/' + mongo.database;
+const url = mongo.url;
 
-MongoClient.connect(url)
-        .then(db => {
-            db.createCollection('fyj');
-
-            db.close();
-        })
-        .catch(err => {
-            throw err;
-        });
+mongoose.connect(url);
