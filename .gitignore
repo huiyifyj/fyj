@@ -16,4 +16,4 @@ yarn-error.log
 .vscode/
 
 # Secretive configuration file
-config/
+config/mongodb.json
