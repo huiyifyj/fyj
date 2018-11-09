@@ -4,4 +4,6 @@ import mongo from '../config/mongodb.json';
 
 const url = mongo.url;
 
-mongoose.connect(url);
+mongoose.connect(url, {
+    poolSize: 10
+});
