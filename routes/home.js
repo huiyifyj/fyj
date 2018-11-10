@@ -1,5 +1,4 @@
-import homeData from '../config/data/home';
-import aboutData from '../config/data/about';
+import homeData from '../data/home';
 
 export default (router) => {
     router.all('/', home)
@@ -12,7 +11,7 @@ const home = (ctx) => {
 }
 
 const about = (ctx) => {
-    ctx.render('about', aboutData);
+    ctx.response.body = '<h1>About Page</h1>'
 }
 
 const rss = (ctx) => {
