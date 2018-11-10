@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+{{include './head' blog}}
+</head>
+<body>
+
+    <header class="author-profile">
+        <div class="inner">
+            {{if image}}
+            <figure class="author-image">
+                <div class="img" style="background-image: url({{image}})">
+                    <span class="hidden">{{name}}'s Picture</span>
+                </div>
+            </figure>
+            {{/if}}
+            <h1 class="blog-title">{{name}}</h1>
+            <h2 class="author-bio">{{bio}}</h2>
+            <ul class="author-meta">
+                {{if location}}
+                <li>
+                    <i class="icon-globe"></i> {{location}}
+                </li>
+                {{/if}}
+                {{if website}}
+                <li>
+                    <i class="icon-code"></i> <a href="{{website}}">{{website}}</a>
+                </li>
+                {{/if}}
+                <li>
+                    <i class="icon-pencil"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <nav class="main-nav overlay clearfix">
+        <a class="back-button icon-arrow-left" href="{{url}}">Home</a>
+    </nav>
+
+</body>
+</html>
