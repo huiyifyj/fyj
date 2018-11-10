@@ -42,28 +42,28 @@ a {
     width: 15px;
     height: 15px;
 }
-  .header,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+.header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Montserrat", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, sans-serif;
     font-weight: 400;
     color: #444;
-  }
-  .main {
+}
+.main {
     max-width: 600px;
     margin: 50px auto;
     padding: 0 30px 50px;
     position: relative;
-  }
-  @media screen and (max-width: 420px) {
+}
+@media screen and (max-width: 420px) {
     .header {
-      margin: 40px auto 10px;
+        margin: 40px auto 10px;
     }
     .header a {
-      font-size: 14px;
+        font-size: 14px;
     }
-  }
+}

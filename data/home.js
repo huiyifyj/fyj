@@ -1,6 +1,7 @@
 export default {
     blog: {
         title: 'Huiyi.FYJ',
+        favicon: 'balloon.png',
         css: ['common', 'index']
     },
     user: {
