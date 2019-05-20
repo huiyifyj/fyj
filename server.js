@@ -10,6 +10,7 @@ import routers from './routes';
 
 const app = new Koa();
 
+// art-template seeting for .htm extname
 render(app, {
     root: path.join(__dirname, './public'),
     extname: '.htm',
@@ -26,5 +27,5 @@ app.use(logger())
    .use(routers.routes())
    .use(routers.allowedMethods())
    .listen(3000, () => {
-        console.log('Listening on port 3000')
+        console.log(`Listening on port :3000. https://127.0.0.1:3000`);
    });
